@@ -46,11 +46,27 @@ import java.util.Scanner;
 
 public class hw3 {
 	public static void main(String[] args) {
+		System.out.println("開始猜數字吧!(0~100)");
+		Scanner sc = new Scanner(System.in);
+		int n = (int) (Math.random()*101);
+		int A = sc.nextInt();
 		
+		while (A != n) {
+			System.out.println("猜錯囉");
+			if(A > n) {
+				System.out.println("大於正確答案");
+			}
+			else {
+				System.out.println("小於正確答案");
+			}
+			
+			A = sc.nextInt();
+		}
+		System.out.println("答對了!答案就是" + A);
 	}
 }
 
-
+//================================================================================
 
 
 
